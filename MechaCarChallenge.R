@@ -21,3 +21,18 @@ total_summary <- coil_table %>% summarize(Mean=mean(PSI),Median=median(PSI),Vari
 
 # Create a lot_summary dataframe group_by() and summarize()
 lot_summary <- coil_table %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI))
+
+
+# Deliverable 3
+# Perform t-test on PSI across all manufacturing lots
+t.test((coil_table$PSI),mu=1500)
+
+# Perform t-test on PSI on individual manufacturing lots
+lot_1 <- subset(coil_table, Manufacturing_Lot == "Lot1")
+t.test(lot_1$PSI,mu=1500)
+
+lot_2 <- subset(coil_table, Manufacturing_Lot == "Lot2")
+t.test(lot_2$PSI, mu=1500)
+
+lot_3 <- subset(coil_table, Manufacturing_Lot == "Lot3")
+t.test(lot_3$PSI, mu=1500)
