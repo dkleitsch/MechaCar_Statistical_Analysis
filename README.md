@@ -1,5 +1,4 @@
 # MechaCar Statistical Analysis
-## Overview
 ## Linear Regression to Predict MPG
 
 ![MPG Screeenshot](https://github.com/dkleitsch/MechaCar_Statistical_Analysis/blob/main/R/MPG%20Screenshot.png)
